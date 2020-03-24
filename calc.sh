@@ -12,8 +12,9 @@ echo "Subtract"
 echo "Exit"
 # Then, capture the user selection.
 read selection
-# If the selection matches a supported operation, execute the operation.
+
 case $selection in
+# If the selection matches a supported operation, execute the operation.
     "Add")
         echo "User has selected 'Add'"
     ;;
@@ -23,6 +24,10 @@ case $selection in
     "Exit")
         echo "User has selected 'Exit'"
     ;;
-esac     
-# If the selection does not match a support operation, display an error message.
+# If the selection does not match a support operation, display an error message.    
+    *)
+        echo "Unsupported operation: $selection"
+        echo "Please try again"
+    ;;    
+esac
 # When the operation is complete, redisplay the menu.
